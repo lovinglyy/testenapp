@@ -1,0 +1,8 @@
+.clientList {
+    width: 60vw;
+    max-height: 80vh;
+    padding-top: 10vh;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
