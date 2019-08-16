@@ -15,3 +15,6 @@ cd <pasta do projeto>
 npm start
 ```
 O servidor irá rodar em modo de desenvolvimento, não produção.
+
+#### Heroku
+https://testenapp.herokuapp.com/
