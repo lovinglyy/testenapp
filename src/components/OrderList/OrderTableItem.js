@@ -33,7 +33,7 @@ OrderTableItem.propTypes = {
       id: PropTypes.number.isRequired,
       product: PropTypes.object.isRequired,
       quantity: PropTypes.number.isRequired,
-      price: PropTypes.number.isRequired,
+      price: PropTypes.string.isRequired,
     },
   ).isRequired,
 };

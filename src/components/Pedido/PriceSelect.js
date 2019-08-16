@@ -75,7 +75,6 @@ const PriceSelect = ({
             multiline
             onChange={handleCustomPriceChange}
             className={classes.textField}
-            margin="normal"
             endAdornment={(
               <InputAdornment position="end">
                 <Radio

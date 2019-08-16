@@ -45,6 +45,8 @@ const orders = (state = [], action) => {
         ? action.order.product.price.toFixed(2)
         : action.order.customPrice.toFixed(2);
 
+      action.order.notify();
+
       return [
         ...state,
         order,

@@ -28,7 +28,7 @@ const QuantitySelect = ({
   const classes = useStyles();
   return (
     <>
-      <Grid className={classes.qtyGrid} container spacing={2} xs={6} alignItems="center">
+      <Grid item className={classes.qtyGrid} container spacing={2} xs={6} alignItems="center">
         <Grid item xs={8}>
           <Slider
             value={typeof quantity === 'number' ? quantity : productMultiple}

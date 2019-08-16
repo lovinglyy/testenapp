@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Route,
 } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import { CookiesProvider } from 'react-cookie';
 import ClientList from './ClientList';
 import OrderList from './OrderList';
@@ -11,6 +12,8 @@ import Pedido from './Pedido';
 import PrivateRoute from '../containers/PrivateRoute';
 import './App.css';
 import ClientsData from '../clients.json';
+
+toast.configure();
 
 /**
  * App's root, wrapped with CookiesProvider that gives a context for

@@ -3,10 +3,13 @@ import PropTypes from 'prop-types';
 import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 import Chip from '@material-ui/core/Chip';
+import { css } from 'glamor';
 import Button from '@material-ui/core/Button';
 import { connect } from 'react-redux';
 import LockIcon from '@material-ui/icons/Lock';
 import Grid from '@material-ui/core/Grid';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
 import Typography from '@material-ui/core/Typography';
 import { isNumber } from '../../utils';
 import { addOrder } from '../../actions';
@@ -61,6 +64,18 @@ const InfoPedido = ({ id, dispatch }) => {
       setQuantity(product.multiple);
     }
   };
+
+  const notify = () => toast(
+    'Pedido feito com sucesso! 🎉',
+    {
+      position: 'bottom-left',
+      className: css({
+        background: '#529e59 !important',
+        color: 'black !important',
+        textAlign: 'center',
+      }),
+    },
+  );
 
   if (!product) {
     return (
@@ -131,6 +146,7 @@ const InfoPedido = ({ id, dispatch }) => {
               quantity,
               priceMethod: Number(priceMethod),
               customPrice,
+              notify,
             }))}
             variant="contained"
             color="secondary"

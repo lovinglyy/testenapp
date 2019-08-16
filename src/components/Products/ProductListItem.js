@@ -54,14 +54,16 @@ const ProductListItem = ({
               <Chip
                 className={classes.spacing}
                 color="secondary"
+                component="span"
                 label={price}
                 size="small"
-                avatar={<Avatar><MoneyIcon /></Avatar>}
+                avatar={<Avatar component="span"><MoneyIcon /></Avatar>}
               />
               {multiple > 1
                 ? (
                   <Chip
                     className={classes.spacing}
+                    component="span"
                     color="secondary"
                     variant="outlined"
                     label={`x${multiple}`}
